@@ -1,0 +1,64 @@
+{
+  "projectName": "Wiped",
+  "repository": "getwiped/wiped",
+  "description": "A dual-track review removal and legal enforcement system combining AI and certified legal mail for businesses harmed by online reviews.",
+  "techStack": {
+    "backend": "Node.js + Express",
+    "frontend": "React + Tailwind",
+    "database": "PostgreSQL",
+    "ai/llm": "OpenAI GPT-4o + agent hooks",
+    "mail": "Lob or PostGrid Certified Mail API",
+    "auth": "Clerk or Auth0 (JWT-based)",
+    "hosting": "Vercel (frontend) + Railway (backend)",
+    "agentOrchestration": "Replit Agents or OpenDevin-compatible"
+  },
+  "directoryStructure": {
+    "root": [
+      ".env.example",
+      "README.md",
+      "kickoff.json"
+    ],
+    "workflows": {
+      "01_discovery_dossier": {},
+      "02_sales_conversion": {},
+      "03_dual_strike": {},
+      "04_legal_escalation": {},
+      "05_attorney_onboarding": {}
+    },
+    "shared": {
+      "models": {},
+      "services": {},
+      "utils": {}
+    },
+    "database": {
+      "schema.sql": "SQL schema placeholder",
+      "seed/": "Optional seed scripts"
+    },
+    "api": {
+      "google/": "Google Maps & Places SDK wrapper",
+      "certifiedMail/": "Lob or PostGrid integration",
+      "enrichment/": "Business enrichment (Clearbit/OpenCorporates)",
+      "ftc/": "FTC citation lookup"
+    },
+    "frontend": {
+      "analyst_dashboard": {},
+      "sales_agent_app": {},
+      "paralegal_console": {},
+      "attorney_portal": {}
+    }
+  },
+  "deploymentHints": {
+    "env": [
+      "GOOGLE_API_KEY",
+      "OPENAI_API_KEY",
+      "CLEARBIT_API_KEY",
+      "LOB_API_KEY"
+    ],
+    "agentFrameworks": [
+      "OpenDevin",
+      "Replit Agent",
+      "v0.dev"
+    ],
+    "mailProvider": "Lob.com or PostGrid.com"
+  }
+}
