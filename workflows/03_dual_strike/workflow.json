@@ -1,0 +1,30 @@
+{
+  "id": "workflow_03_dual_strike",
+  "name": "Dispute + Legal Letter Execution",
+  "description": "Launches simultaneous platform disputes and certified legal notices to pressure removal.",
+  "actors": [
+    "Paralegal",
+    "LLM Agent"
+  ],
+  "entrypoints": [
+    "/dispute",
+    "/legal/send"
+  ],
+  "inputs": [
+    "review text",
+    "letter template",
+    "client approval"
+  ],
+  "outputs": [
+    "dispute result",
+    "certified letter sent"
+  ],
+  "externalAPIs": [
+    "Google Reviews",
+    "Certified Mail API"
+  ],
+  "triggers": [
+    "onDispute",
+    "onLetterApproval"
+  ]
+}

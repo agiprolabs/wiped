@@ -1,0 +1,27 @@
+{
+  "id": "workflow_05_attorney_onboarding",
+  "name": "Attorney Onboarding & Letterhead Setup",
+  "description": "Registers attorneys, verifies bar credentials, and loads letterhead into system.",
+  "actors": [
+    "Attorney",
+    "Admin"
+  ],
+  "entrypoints": [
+    "/apply",
+    "/onboard"
+  ],
+  "inputs": [
+    "bar license",
+    "letterhead",
+    "jurisdiction"
+  ],
+  "outputs": [
+    "attorney record"
+  ],
+  "databaseTables": [
+    "attorneys"
+  ],
+  "triggers": [
+    "onSubmit"
+  ]
+}

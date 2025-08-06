@@ -1,0 +1,28 @@
+{
+  "id": "workflow_04_escalation",
+  "name": "Attorney Escalation & Signed Letter Dispatch",
+  "description": "Routes high-risk cases to real attorneys for letterhead signature and escalation.",
+  "actors": [
+    "Paralegal",
+    "Attorney"
+  ],
+  "entrypoints": [
+    "/assign",
+    "/sign"
+  ],
+  "inputs": [
+    "draft letter",
+    "review metadata"
+  ],
+  "outputs": [
+    "signed letter",
+    "dispatch"
+  ],
+  "externalAPIs": [
+    "Certified Mail API"
+  ],
+  "triggers": [
+    "onNoReviewChange",
+    "onEscalation"
+  ]
+}

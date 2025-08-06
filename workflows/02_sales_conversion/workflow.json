@@ -1,0 +1,27 @@
+{
+  "id": "workflow_02_sales",
+  "name": "Sales Presentation & Conversion",
+  "description": "Presents legal options and pricing to businesses and initiates case setup upon approval.",
+  "actors": [
+    "Sales Agent"
+  ],
+  "entrypoints": [
+    "/present",
+    "/convert"
+  ],
+  "inputs": [
+    "dossier",
+    "client selection"
+  ],
+  "outputs": [
+    "client record",
+    "case trigger"
+  ],
+  "databaseTables": [
+    "clients",
+    "subscriptions"
+  ],
+  "triggers": [
+    "onClientApproval"
+  ]
+}

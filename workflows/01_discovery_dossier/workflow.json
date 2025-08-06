@@ -1,0 +1,35 @@
+{
+  "id": "workflow_01_discovery",
+  "name": "Business Discovery & Dossier Generation",
+  "description": "Identifies businesses with harmful reviews and generates enriched dossiers with legal scoring.",
+  "actors": [
+    "Analyst",
+    "LLM Agent"
+  ],
+  "entrypoints": [
+    "/search",
+    "/dossier"
+  ],
+  "inputs": [
+    "Google Maps API",
+    "Google Places API",
+    "Clearbit",
+    "CourtRecordsAPI"
+  ],
+  "outputs": [
+    "dossierObject"
+  ],
+  "databaseTables": [
+    "businesses",
+    "reviews",
+    "dossiers"
+  ],
+  "agents": [
+    "LLM review classifier",
+    "owner/revenue enricher"
+  ],
+  "triggers": [
+    "onSearch",
+    "onFlagReview"
+  ]
+}
